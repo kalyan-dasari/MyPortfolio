@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import formalPic from '@/assets/professional.jpeg';
+import originPic from '@/assets/personal.jpg';
 
 type ProfileMode = 'professional' | 'personal';
 
@@ -9,16 +11,16 @@ export function HomePage() {
 
   const profiles = {
     professional: {
-      name: 'Alex Johnson',
+      name: 'Dasari Kalyan',
       role: 'Full-Stack Developer',
       bio: 'A final-year student passionate about building digital products and solving problems. Experienced in modern web technologies and dedicated to creating impactful solutions.',
-      image: 'https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjgxOTQ1NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: formalPic,
     },
     personal: {
-      name: 'Alex Johnson',
+      name: 'Dasari Kalyan',
       role: 'Explorer',
       bio: 'Curious mind who loves trying new domains, capturing moments, and learning continuously. Always seeking new experiences and perspectives to grow.',
-      image: 'https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjgxOTQ1NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: originPic,
     },
   };
 
