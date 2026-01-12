@@ -1,10 +1,10 @@
-Portfolio Website
+**Portfolio Website**
 
 This repository contains the source code for my personal portfolio website.
 
 The site is live at: https://www.kalyandasari.in
 
-✨ Features
+✨ **Features**
 
 Modern and responsive UI
 
@@ -14,34 +14,34 @@ Showcases projects, skills, and background
 
 Fast and lightweight build
 
-🛠 Tech Stack
+🛠 **Tech Stack**
 
 HTML / CSS / JavaScript (or add framework if used — e.g., React, Next.js, Tailwind etc.)
 
 Deployed on Vercel / Netlify / GitHub Pages (update based on your deployment)
 
-🚀 Running Locally
+🚀 **Running Locally**
 
-Install dependencies:
+_Install dependencies:_
 
 npm i
 
 
-Start the development server:
+_Start the development server:_
 
 npm run dev
 
 
-Open in browser:
+_Open in browser:_
 
 http://localhost:3000
 
 
 (Port may vary based on framework)
 
-📦 Build (if applicable)
+📦 **Build (if applicable)**
 npm run build
 
-📬 Feedback
+📬 **Feedback**
 
 If you have suggestions or feedback, feel free to open an issue or reach out!
