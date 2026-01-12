@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Code, Heart, Lightbulb, Target } from 'lucide-react';
+import aboutImage from '@/assets/look.jpeg'; // Change to personal.jpg if preferred
 
 export function AboutPage() {
   const sections = [
@@ -8,25 +9,25 @@ export function AboutPage() {
       icon: Target,
       title: 'Who I Am',
       content:
-        "I'm a passionate developer and lifelong learner who believes in the power of technology to transform lives. My journey in tech has been driven by curiosity and a desire to create meaningful solutions.",
+        "I'm a final-year student, a passionate developer, and a lifelong learner who believes in the power of technology to transform lives. My journey in tech has been driven by curiosity and a desire to create meaningful solutions.  I love exploring different domains—tech and non-tech—because it allows me to discover new interests and understand the world from multiple angles.",
     },
     {
       icon: Heart,
       title: 'My Interests',
       content:
-        'Beyond coding, I enjoy exploring new technologies, contributing to open-source projects, and staying up-to-date with the latest industry trends. I also love photography and capturing moments that tell stories.',
+        'Beyond coding, I enjoy experimenting with new technologies and creative writing, especially novels. I’m a fan of sci-fi movies, and I also love photography—capturing moments that tell stories and experimenting with minimal photo and video edits.',
     },
     {
       icon: Lightbulb,
       title: 'My Goals',
       content:
-        'My goal is to continuously grow as a developer while making a positive impact through technology. I aspire to work on projects that solve real-world problems and contribute to making the digital world more accessible.',
+        'My goal is to continuously grow as a developer while using technology to make a positive impact. I want to work on projects that solve real-world problems and gain practical experience within a strong company ecosystem and work culture.  In the long term, I aspire to build a business or startup that creates opportunities for others, especially talented individuals from rural backgrounds.',
     },
     {
       icon: Code,
       title: 'Tech & Hobbies',
       content:
-        "I'm proficient in modern web technologies including React, TypeScript, Node.js, and Python. When I'm not coding, you'll find me experimenting with new frameworks, reading tech blogs, or exploring creative photography.",
+        "I'm proficient in modern web development—including frontend, backend, databases, and Python along with a few frameworks. When I'm not coding, you'll find me exploring new tech, watching movies, or diving into photography and videography.",
     },
   ];
 
@@ -52,7 +53,7 @@ export function AboutPage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full blur-3xl opacity-20"></div>
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjgxOTQ1NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              src={aboutImage}
               alt="Profile"
               className="relative w-48 h-48 rounded-full object-cover shadow-2xl ring-4 ring-white"
             />

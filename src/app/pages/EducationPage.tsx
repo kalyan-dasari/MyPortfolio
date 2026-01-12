@@ -1,6 +1,9 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { GraduationCap } from 'lucide-react';
+import trinity from '@/assets/trinity.avif';
+import mrce from '@/assets/mrcee.jpg';
+import modelscool from '@/assets/modelschool.jpg';
+
 
 export function EducationPage() {
   const educationData = [
@@ -8,22 +11,22 @@ export function EducationPage() {
       institution: 'Malla Reddy College of Engineering',
       degree: 'B.Tech CSE (AIML)',
       duration: '2022 - 2026',
-      cgpa: '8.5 CGPA',
-      image: 'https://images.unsplash.com/photo-1724436781032-c1645c5783ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwY2FtcHVzJTIwYnVpbGRpbmd8ZW58MXx8fHwxNzY4MTQyNjI3fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      cgpa: '8.1 CGPA',
+      image: mrce,
     },
     {
       institution: 'Intermediate College',
       degree: 'Intermediate (MPC)',
       duration: '2020 - 2022',
-      cgpa: '9.2 CGPA',
-      image: 'https://images.unsplash.com/photo-1724436781032-c1645c5783ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwY2FtcHVzJTIwYnVpbGRpbmd8ZW58MXx8fHwxNzY4MTQyNjI3fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      cgpa: '9.84 CGPA',
+      image: trinity,
     },
     {
       institution: 'Secondary School',
       degree: 'High School',
       duration: '2019 - 2020',
-      cgpa: '9.5 CGPA',
-      image: 'https://images.unsplash.com/photo-1724436781032-c1645c5783ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwY2FtcHVzJTIwYnVpbGRpbmd8ZW58MXx8fHwxNzY4MTQyNjI3fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      cgpa: '10 CGPA',
+      image: modelscool,
     },
   ];
 
@@ -52,9 +55,11 @@ export function EducationPage() {
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-xl">
-                    <GraduationCap className="w-16 h-16 text-blue-600" />
-                  </div>
+                  <ImageWithFallback
+                    src={edu.image}
+                    alt={edu.institution}
+                    className="w-32 h-32 rounded-full object-cover shadow-xl border-4 border-white"
+                  />
                 </div>
               </div>
 
@@ -99,9 +104,23 @@ export function EducationPage() {
                     <div className="w-6 h-6 bg-white border-4 border-blue-600 rounded-full shadow-lg z-10"></div>
                   </div>
                   <div className="w-5/12 bg-white rounded-2xl p-6 shadow-lg">
-                    <h4 className="font-bold text-gray-900 mb-2">{edu.institution}</h4>
-                    <p className="text-gray-700 mb-1">{edu.degree}</p>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <ImageWithFallback
+                        src={edu.image}
+                        alt={edu.institution}
+                        className="w-16 h-16 rounded-full object-cover border-2 border-gray-200"
+                      />
+                      <div>
+                        <h4 className="font-bold text-gray-900">{edu.institution}</h4>
+                        <p className="text-gray-700 text-sm">{edu.degree}</p>
+                      </div>
+                    </div>
                     <p className="text-sm text-gray-500">{edu.duration}</p>
+                    <div className="mt-2">
+                      <span className="inline-block px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full text-xs font-semibold">
+                        {edu.cgpa}
+                      </span>
+                    </div>
                   </div>
                 </motion.div>
               ))}

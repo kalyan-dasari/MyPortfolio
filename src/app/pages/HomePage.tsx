@@ -13,13 +13,13 @@ export function HomePage() {
     professional: {
       name: 'Dasari Kalyan',
       role: 'Full-Stack Developer',
-      bio: 'A final-year student passionate about building digital products and solving problems. Experienced in modern web technologies and dedicated to creating impactful solutions.',
+      bio: 'I’m a Computer Science (AIML) student with interests in full-stack development and AI. I explore new tools, frameworks, and modern web technologies to build practical solutions. I enjoy working on real-world projects that blend functionality with clean design. Always learning, improving, and staying updated with the fast-moving tech ecosystem.',
       image: formalPic,
     },
     personal: {
       name: 'Dasari Kalyan',
       role: 'Explorer',
-      bio: 'Curious mind who loves trying new domains, capturing moments, and learning continuously. Always seeking new experiences and perspectives to grow.',
+      bio: 'I’m someone who loves exploring new technologies and creative ideas. In my free time, I experiment with novel writing, storytelling, and video editing. I enjoy learning different perspectives and turning them into something meaningful. Curiosity drives me, and creativity keeps me balanced.',
       image: originPic,
     },
   };
