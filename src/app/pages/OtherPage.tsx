@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { ExternalLink } from 'lucide-react';
+import podcast from '@/assets/podcast.jpeg'; // Change to personal.jpg if preferred
+import studio from '@/assets/studio.png'; // Change to personal.jpg if preferred
 
 export function OtherPage() {
   const externalProjects = [
@@ -8,25 +10,43 @@ export function OtherPage() {
       title: 'OpenReaders',
       tagline: 'A platform for open reading and story sharing',
       description:
-        'OpenReaders is a community-driven platform where readers and writers come together to share stories, discuss literature, and discover new content.',
+        'OpenReaders is a community-driven platform to share stories, books, and discover new content across genres.',
       image: 'https://images.unsplash.com/photo-1758876203761-623fcf794de2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibG9nJTIwcGxhdGZvcm18ZW58MXx8fHwxNzY4MTE0Mzg5fDA&ixlib=rb-4.1.0&q=80&w=1080',
       url: 'https://example.com',
       featured: true,
     },
     {
-      title: 'DevTools Hub',
-      tagline: 'Essential tools for modern developers',
+      title: 'BTech Hub',
+      tagline: 'JNTUH student materials',
       description:
-        'A curated collection of developer tools and resources to boost productivity and streamline your development workflow.',
+        'A resource hub for JNTUH students to access syllabi, notes, PDFs and more, with simple view and download support.',
       image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       url: 'https://example.com',
       featured: false,
     },
     {
-      title: 'CodeSnippets Library',
-      tagline: 'Reusable code snippets for rapid development',
+      title: 'UnMuteVoices',
+      tagline: 'A text podcast channel for hidden voices',
       description:
-        'A comprehensive library of code snippets across multiple programming languages and frameworks to accelerate your projects.',
+        'A podcast-style text platform giving voice to people who struggle to express feelings and thoughts, sharing their experiences and stories.',
+      image: podcast,
+      url: 'https://www.linkedin.com/company/109281957/admin/dashboard/',
+      featured: false,
+    },
+    {
+      title: 'Life With Kalyan',
+      tagline: 'YouTube channel for web design inspiration',
+      description:
+        'A curated collection of developer tools and resources to boost productivity and streamline your development workflow.',
+      image: studio,
+      url: 'https://www.youtube.com/@LifewithKalyan',
+      featured: false,
+    },
+    {
+      title: 'Blogger Page',
+      tagline: 'English Local News — Karimnagar',
+      description:
+        'A blogging platform providing daily news updates in English about Karimnagar and surrounding areas, where most local news is otherwise available only in Telugu.',
       image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       url: 'https://example.com',
       featured: false,
