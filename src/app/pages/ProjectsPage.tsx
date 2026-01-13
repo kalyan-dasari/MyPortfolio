@@ -1,14 +1,14 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { ExternalLink, Github } from 'lucide-react';
-import Billreminder from '@/assets/Bill_reminder.png'; // Change to personal.jpg if preferred
-import College_portal from '@/assets/College_portal.png'; // Change to personal.jpg if preferred
-import ExpiCal from '@/assets/ExpiCal.png'; // Change to personal.jpg if preferred
-import Leave_Management from '@/assets/Leave_management.png'; // Change to personal.jpg if preferred
-import Spaceship from '@/assets/Spaceship.png'; // Change to personal.jpg if preferred
-import social_media_card from '@/assets/social_media_card.png'; // Change to personal.jpg if preferred
-import URL_checker from '@/assets/URL_checker.png'; // Change to personal.jpg if preferred
-import Video_to_text from '@/assets/Video_to_text.png'; // Change to personal.jpg if preferred
+import Billreminder from '@/assets/Bill_reminder.png'; 
+import College_portal from '@/assets/College_portal.png'; 
+import ExpiCal from '@/assets/ExpiCal.png'; 
+import Leave_Management from '@/assets/Leave_management.png'; 
+import Spaceship from '@/assets/Spaceship.png'; // 
+import social_media_card from '@/assets/social_media_card.png'; 
+import URL_checker from '@/assets/URL_checker.png'; 
+import Video_to_text from '@/assets/Video_to_text.png'; 
 
 export function ProjectsPage() {
   const projects = [

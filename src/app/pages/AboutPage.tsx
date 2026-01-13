@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Code, Heart, Lightbulb, Target } from 'lucide-react';
-import aboutImage from '@/assets/look.jpeg'; // Change to personal.jpg if preferred
+import aboutImage from '@/assets/look.jpeg'; 
 
 export function AboutPage() {
   const sections = [

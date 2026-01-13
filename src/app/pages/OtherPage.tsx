@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { ExternalLink } from 'lucide-react';
-import podcast from '@/assets/podcast.jpeg'; // Change to personal.jpg if preferred
-import studio from '@/assets/studio.png'; // Change to personal.jpg if preferred
+import podcast from '@/assets/podcast.jpeg'; 
+import studio from '@/assets/studio.png'; 
 
 export function OtherPage() {
   const externalProjects = [
