@@ -1,53 +1,89 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { ExternalLink, Github } from 'lucide-react';
+import Billreminder from '@/assets/Bill_reminder.png'; // Change to personal.jpg if preferred
+import College_portal from '@/assets/College_portal.png'; // Change to personal.jpg if preferred
+import ExpiCal from '@/assets/ExpiCal.png'; // Change to personal.jpg if preferred
+import Leave_Management from '@/assets/Leave_management.png'; // Change to personal.jpg if preferred
+import Spaceship from '@/assets/Spaceship.png'; // Change to personal.jpg if preferred
+import social_media_card from '@/assets/social_media_card.png'; // Change to personal.jpg if preferred
+import URL_checker from '@/assets/URL_checker.png'; // Change to personal.jpg if preferred
+import Video_to_text from '@/assets/Video_to_text.png'; // Change to personal.jpg if preferred
 
 export function ProjectsPage() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'Bill Reminder',
       description:
-        'A full-featured e-commerce platform with product management, shopping cart, and secure checkout. Built with React and Node.js.',
-      image: 'https://images.unsplash.com/photo-1763872011479-aa293bf083a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlLWNvbW1lcmNlJTIwd2Vic2l0ZXxlbnwxfHx8fDE3NjgxMzEwODV8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+        'A local-first personal finance tool for tracking bill payments and reminders. Built with Flask and SQLite, featuring a clean dashboard UI.',
+      image: Billreminder,
+      tags: ['Flask', 'SQLite', 'Bootstrap'],
+      github: 'https://github.com/kalyan-dasari/My-Bill-Reminder',
+      demo: 'https://my-bill-reminder.onrender.com/',
     },
     {
-      title: 'Task Manager App',
+      title: 'College Event Portal',
       description:
-        'A collaborative task management application with real-time updates, team collaboration features, and intuitive UI.',
-      image: 'https://images.unsplash.com/photo-1651055693398-0d66969cf759?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXNrJTIwbWFuYWdlciUyMGFwcHxlbnwxfHx8fDE3NjgyMTE4MDl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['TypeScript', 'React', 'Firebase'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+        'A centralized portal for managing college events and registrations. Students can view events and register; data can integrate with Sheets or databases.',
+      image: College_portal,
+      tags: ['Frontend', 'Event Management'],
+      github: 'https://github.com/kalyan-dasari/college-portal',
+      demo: 'https://kalyan-dasari.github.io/college-portal/homepage.html',
     },
     {
-      title: 'Blog Platform',
+      title: 'Expenditure Calculator (ExpiCal)',
       description:
-        'A modern blogging platform with markdown support, comment system, and user authentication. SEO optimized and fast.',
-      image: 'https://images.unsplash.com/photo-1758876203761-623fcf794de2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibG9nJTIwcGxhdGZvcm18ZW58MXx8fHwxNzY4MTE0Mzg5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['Next.js', 'PostgreSQL', 'Tailwind'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+        'Tracks monthly expenses including offline spending, with graphs and averages. Helps users understand and manage their monthly budget.',
+      image: ExpiCal,
+      tags:  ['Flask', 'Charts', 'Finance'],
+      github: 'https://github.com/kalyan-dasari/Expenditure-Calculator',
+      demo: 'https://kalyan-dasari.github.io/Expenditure-Calculator/',
     },
     {
-      title: 'Weather Dashboard',
+      title: 'Leave Management System',
       description:
-        'Real-time weather tracking dashboard with location-based forecasts, interactive maps, and detailed analytics.',
-      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['React', 'API Integration', 'Charts'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+        'A student leave submission system with email notifications and approval workflow for incharges. Supports online leave tracking.',
+      image: Leave_Management,
+      tags: ['Web App', 'Email Alerts', 'Frontend'],
+      github: 'https://github.com/kalyan-dasari/leave-management',
+      demo: 'https://leave-management-kclb.onrender.com/',
     },
     {
-      title: 'Portfolio Generator',
+      title: 'Social Media Card',
       description:
-        'An automated portfolio generator that creates beautiful portfolio websites from user data with customizable themes.',
-      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['React', 'Templates', 'Export'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+        'A simple UI component displaying user profile, followers, and following stats. Built as a frontend UI experiment.',
+      image: social_media_card,
+      tags: ['Frontend', 'HTML/CSS'],
+      github: 'https://github.com/kalyan-dasari/Social-media-card',
+      demo: 'https://kalyan-dasari.github.io/Social-media-card/',
+    },
+    {
+      title: 'Spaceship Shooter Game',
+      description:
+        'A 2D browser game where players control a spaceship, shoot asteroids, and navigate using keyboard controls.',
+      image: Spaceship,
+      tags: ['JavaScript', 'Game Dev', 'HTML/CSS'],
+      github: 'https://github.com/kalyan-dasari/spaceship-game',
+      demo: 'https://kalyan-dasari.github.io/spaceship-game/',
+    },
+    
+    {
+      title: 'Suspicious URL Checker',
+      description:
+        'Checks if a given URL is fake or suspicious by analyzing domains and patterns. Simple and fast client-side detection.',
+      image: URL_checker,
+      tags: ['JavaScript', 'Security', 'HTML/CSS'],
+      github: 'https://github.com/kalyan-dasari/URL-Checker',
+      demo: 'https://kalyan-dasari.github.io/URL-Checker/',
+    },
+    {
+      title: 'Video to Text (Telugu)',
+      description:
+        'Converts video speech to Telugu text with a dual-window interface. Useful for extracting dialogue or content from videos.',
+      image: Video_to_text,
+      tags: ['Speech-to-Text', 'JavaScript', 'Frontend'],
+      github: 'https://github.com/kalyan-dasari/video-To-text',
+      demo: 'https://kalyan-dasari.github.io/video-To-text/',
     },
     {
       title: 'Chat Application',
