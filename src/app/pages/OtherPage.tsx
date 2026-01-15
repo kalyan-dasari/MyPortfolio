@@ -2,7 +2,8 @@ import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { ExternalLink } from 'lucide-react';
 import podcast from '@/assets/podcast.jpeg'; 
-import studio from '@/assets/studio.png'; 
+import studio from '@/assets/studio.png';
+import lawWebsite from '@/assets/lawWebsite.png';  
 
 export function OtherPage() {
   const externalProjects = [
@@ -52,13 +53,13 @@ export function OtherPage() {
       featured: false,
     },
     {
-      title: 'Design Inspiration',
-      tagline: 'Curated collection of web design inspiration',
+      title: 'Law Students Hub',
+      tagline: 'Website for law students OU Affiliated colleges',
       description:
-        'Browse through a handpicked collection of stunning web designs, UI patterns, and creative layouts to inspire your next project.',
-      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      url: 'https://example.com',
-      featured: false,
+        'A helpful platform for BALLB students in OU-affiliated colleges to explore their curriculum, download study materials, track semesters, and stay organized throughout their 5-year course.',
+      image: lawWebsite,
+      url: 'https://law-students-website.vercel.app/',
+      featured: true,
     },
   ];
 
