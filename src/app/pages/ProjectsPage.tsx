@@ -18,8 +18,8 @@ export function ProjectsPage() {
         'A local-first personal finance tool for tracking bill payments and reminders. Built with Flask and SQLite, featuring a clean dashboard UI.',
       image: Billreminder,
       tags: ['Flask', 'SQLite', 'Bootstrap'],
-      github: 'https://github.com/kalyan-dasari/My-Bill-Reminder',
-      demo: 'https://my-bill-reminder.onrender.com/',
+      // github: 'https://github.com/kalyan-dasari/My-Bill-Reminder',
+      // demo: 'https://my-bill-reminder.onrender.com/',
     },
     {
       title: 'College Event Portal',
@@ -27,8 +27,8 @@ export function ProjectsPage() {
         'A centralized portal for managing college events and registrations. Students can view events and register; data can integrate with Sheets or databases.',
       image: College_portal,
       tags: ['Frontend', 'Event Management'],
-      github: 'https://github.com/kalyan-dasari/college-portal',
-      demo: 'https://kalyan-dasari.github.io/college-portal/homepage.html',
+      // github: 'https://github.com/kalyan-dasari/college-portal',
+      // demo: 'https://kalyan-dasari.github.io/college-portal/homepage.html',
     },
     {
       title: 'Expenditure Calculator (ExpiCal)',
@@ -36,8 +36,8 @@ export function ProjectsPage() {
         'Tracks monthly expenses including offline spending, with graphs and averages. Helps users understand and manage their monthly budget.',
       image: ExpiCal,
       tags:  ['Flask', 'Charts', 'Finance'],
-      github: 'https://github.com/kalyan-dasari/Expenditure-Calculator',
-      demo: 'https://kalyan-dasari.github.io/Expenditure-Calculator/',
+      // github: 'https://github.com/kalyan-dasari/Expenditure-Calculator',
+      // demo: 'https://kalyan-dasari.github.io/Expenditure-Calculator/',
     },
     {
       title: 'Leave Management System',
@@ -45,8 +45,8 @@ export function ProjectsPage() {
         'A student leave submission system with email notifications and approval workflow for incharges. Supports online leave tracking.',
       image: Leave_Management,
       tags: ['Web App', 'Email Alerts', 'Frontend'],
-      github: 'https://github.com/kalyan-dasari/leave-management',
-      demo: 'https://leave-management-kclb.onrender.com/',
+      // github: 'https://github.com/kalyan-dasari/leave-management',
+      // demo: 'https://leave-management-kclb.onrender.com/',
     },
     {
       title: 'Social Media Card',
@@ -54,8 +54,8 @@ export function ProjectsPage() {
         'A simple UI component displaying user profile, followers, and following stats. Built as a frontend UI experiment.',
       image: social_media_card,
       tags: ['Frontend', 'HTML/CSS'],
-      github: 'https://github.com/kalyan-dasari/Social-media-card',
-      demo: 'https://kalyan-dasari.github.io/Social-media-card/',
+      // github: 'https://github.com/kalyan-dasari/Social-media-card',
+      // demo: 'https://kalyan-dasari.github.io/Social-media-card/',
     },
     {
       title: 'Spaceship Shooter Game',
@@ -63,8 +63,8 @@ export function ProjectsPage() {
         'A 2D browser game where players control a spaceship, shoot asteroids, and navigate using keyboard controls.',
       image: Spaceship,
       tags: ['JavaScript', 'Game Dev', 'HTML/CSS'],
-      github: 'https://github.com/kalyan-dasari/spaceship-game',
-      demo: 'https://kalyan-dasari.github.io/spaceship-game/',
+      // github: 'https://github.com/kalyan-dasari/spaceship-game',
+      // demo: 'https://kalyan-dasari.github.io/spaceship-game/',
     },
     
     {
@@ -73,8 +73,8 @@ export function ProjectsPage() {
         'Checks if a given URL is fake or suspicious by analyzing domains and patterns. Simple and fast client-side detection.',
       image: URL_checker,
       tags: ['JavaScript', 'Security', 'HTML/CSS'],
-      github: 'https://github.com/kalyan-dasari/URL-Checker',
-      demo: 'https://kalyan-dasari.github.io/URL-Checker/',
+      // github: 'https://github.com/kalyan-dasari/URL-Checker',
+      // demo: 'https://kalyan-dasari.github.io/URL-Checker/',
     },
     {
       title: 'Video to Text (Telugu)',
@@ -82,8 +82,8 @@ export function ProjectsPage() {
         'Converts video speech to Telugu text with a dual-window interface. Useful for extracting dialogue or content from videos.',
       image: Video_to_text,
       tags: ['Speech-to-Text', 'JavaScript', 'Frontend'],
-      github: 'https://github.com/kalyan-dasari/video-To-text',
-      demo: 'https://kalyan-dasari.github.io/video-To-text/',
+      // github: 'https://github.com/kalyan-dasari/video-To-text',
+      // demo: 'https://kalyan-dasari.github.io/video-To-text/',
     },
     {
       title: 'Chat Application',
@@ -91,8 +91,8 @@ export function ProjectsPage() {
         'Real-time messaging app with group chats, file sharing, and end-to-end encryption for secure communication.',
       image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       tags: ['Socket.io', 'React', 'Node.js'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+      // github: 'https://github.com',
+      // demo: 'https://example.com',
     },
   ];
 
@@ -152,8 +152,8 @@ export function ProjectsPage() {
                 {/* Buttons */}
                 <div className="flex gap-3 pt-2">
                   <a
-                    href={project.github}
-                    target="_blank"
+                    // href={project.github}
+                    // target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors"
                   >
@@ -161,8 +161,8 @@ export function ProjectsPage() {
                     <span className="text-sm font-medium">GitHub</span>
                   </a>
                   <a
-                    href={project.demo}
-                    target="_blank"
+                    // href={project.demo}
+                    // target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:opacity-90 transition-opacity"
                   >
