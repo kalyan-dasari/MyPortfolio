@@ -172,7 +172,7 @@ export function OtherPage() {
                   </p>
 
                   {/* Button */}
-                  <div className="pt-2">
+                  {/* <div className="pt-2">
                     <a
                       // href={project.url}
                       // target="_blank"
@@ -182,7 +182,7 @@ export function OtherPage() {
                       <span className="text-sm font-medium">Visit Website</span>
                       <ExternalLink className="w-4 h-4" />
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             ))}

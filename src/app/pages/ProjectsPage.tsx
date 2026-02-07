@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { ExternalLink, Github } from 'lucide-react';
+// import { ExternalLink, Github } from 'lucide-react';
 import Billreminder from '@/assets/Bill_reminder.png'; 
 import College_portal from '@/assets/College_portal.png'; 
 import ExpiCal from '@/assets/ExpiCal.png'; 
@@ -150,7 +150,7 @@ export function ProjectsPage() {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-3 pt-2">
+                {/* <div className="flex gap-3 pt-2">
                   <a
                     // href={project.github}
                     // target="_blank"
@@ -169,7 +169,7 @@ export function ProjectsPage() {
                     <ExternalLink className="w-4 h-4" />
                     <span className="text-sm font-medium">View</span>
                   </a>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}
