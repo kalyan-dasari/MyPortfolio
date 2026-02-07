@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { ExternalLink } from 'lucide-react';
+// import { ExternalLink } from 'lucide-react';
 import podcast from '@/assets/podcast.jpeg'; 
 import studio from '@/assets/studio.png';
 import lawWebsite from '@/assets/lawWebsite.png';  
@@ -121,7 +121,7 @@ export function OtherPage() {
                     <p className="text-lg text-gray-600 italic">{project.tagline}</p>
                   </div>
                   <p className="text-gray-700 leading-relaxed">{project.description}</p>
-                  <div>
+                  {/* <div>
                     <a
                       // href={project.url}
                       // target="_blank"
@@ -131,7 +131,7 @@ export function OtherPage() {
                       <span className="font-semibold">Visit Website</span>
                       <ExternalLink className="w-5 h-5" />
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </motion.div>
