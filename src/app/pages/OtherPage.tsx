@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-// import { ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import podcast from '@/assets/podcast.jpeg'; 
 import studio from '@/assets/studio.png';
 import lawWebsite from '@/assets/lawWebsite.png';  
@@ -13,8 +13,7 @@ export function OtherPage() {
       description:
         'OpenReaders is a community-driven platform to share stories, books, and discover new content across genres.',
       image: 'https://images.unsplash.com/photo-1758876203761-623fcf794de2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibG9nJTIwcGxhdGZvcm18ZW58MXx8fHwxNzY4MTE0Mzg5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      // url: 'https://example.com',
-      url: null,
+      url: 'https://example.com',
       featured: true,
     },
     {
@@ -23,8 +22,7 @@ export function OtherPage() {
       description:
         'A resource hub for JNTUH students to access syllabi, notes, PDFs and more, with simple view and download support.',
       image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      // url: 'https://example.com',
-      url: null,
+      url: 'https://example.com',
       featured: false,
     },
     {
@@ -33,8 +31,7 @@ export function OtherPage() {
       description:
         'A podcast-style text platform giving voice to people who struggle to express feelings and thoughts, sharing their experiences and stories.',
       image: podcast,
-      // url: 'https://www.linkedin.com/company/109281957/admin/dashboard/',
-      url: null,
+      url: 'https://www.linkedin.com/company/109281957/admin/dashboard/',
       featured: false,
     },
     {
@@ -43,8 +40,7 @@ export function OtherPage() {
       description:
         'A curated collection of developer tools and resources to boost productivity and streamline your development workflow.',
       image: studio,
-      // url: 'https://www.youtube.com/@LifewithKalyan',
-      url: null,
+      url: 'https://www.youtube.com/@LifewithKalyan',
       featured: false,
     },
     {
@@ -53,8 +49,7 @@ export function OtherPage() {
       description:
         'A blogging platform providing daily news updates in English about Karimnagar and surrounding areas, where most local news is otherwise available only in Telugu.',
       image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      // url: 'https://example.com',
-      url: null,
+      url: 'https://example.com',
       featured: false,
     },
     {
@@ -63,8 +58,7 @@ export function OtherPage() {
       description:
         'A helpful platform for BALLB students in OU-affiliated colleges to explore their curriculum, download study materials, track semesters, and stay organized throughout their 5-year course.',
       image: lawWebsite,
-      // url: 'https://law-students-website.vercel.app/',
-      url: null,
+      url: 'https://law-students-website.vercel.app/',
       featured: true,
     },
   ];
@@ -121,17 +115,17 @@ export function OtherPage() {
                     <p className="text-lg text-gray-600 italic">{project.tagline}</p>
                   </div>
                   <p className="text-gray-700 leading-relaxed">{project.description}</p>
-                  {/* <div>
+                  <div>
                     <a
-                      // href={project.url}
-                      // target="_blank"
+                      href={project.url}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
                     >
                       <span className="font-semibold">Visit Website</span>
                       <ExternalLink className="w-5 h-5" />
                     </a>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -172,17 +166,17 @@ export function OtherPage() {
                   </p>
 
                   {/* Button */}
-                  {/* <div className="pt-2">
+                  <div className="pt-2">
                     <a
-                      // href={project.url}
-                      // target="_blank"
+                      href={project.url}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:opacity-90 transition-opacity w-full justify-center"
                     >
                       <span className="text-sm font-medium">Visit Website</span>
                       <ExternalLink className="w-4 h-4" />
                     </a>
-                  </div> */}
+                  </div>
                 </div>
               </motion.div>
             ))}
