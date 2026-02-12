@@ -13,7 +13,7 @@ export function OtherPage() {
       description:
         'OpenReaders is a community-driven platform to share stories, books, and discover new content across genres.',
       image: 'https://images.unsplash.com/photo-1758876203761-623fcf794de2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibG9nJTIwcGxhdGZvcm18ZW58MXx8fHwxNzY4MTE0Mzg5fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      url: 'https://example.com',
+      url: 'https://open-readers-4el8ysvbi-kalyans-projects-e0a59db6.vercel.app/',
       featured: true,
     },
     {
