@@ -4,6 +4,12 @@ import { ExternalLink } from 'lucide-react';
 import podcast from '@/assets/podcast.jpeg'; 
 import studio from '@/assets/studio.png';
 import lawWebsite from '@/assets/lawWebsite.png';  
+import AfterClass from '@/assets/AfterClass.png';  
+import QuickGram from '@/assets/QuickGram.png';  
+import Lastminprep from '@/assets/Lastminprep.png';  
+import CareCall from '@/assets/CareCall.png'; 
+import StudEarn from '@/assets/StudEarn.png'; 
+
 
 export function OtherPage() {
   const externalProjects = [
@@ -30,7 +36,7 @@ export function OtherPage() {
       tagline: 'AI-powered exam prep',
       description:
         'AI-powered exam preparation platform built to help students revise important topics, generate study plans, and prepare effectively when time is limited.',
-      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: Lastminprep,
       url: 'https://example.com',
       featured: false,
     },
@@ -39,7 +45,7 @@ export function OtherPage() {
       tagline: 'Earn while you learn',
       description:
         'Student-focused platform connecting young learners with earning opportunities, skill-building resources, and real-world experiences beyond academics.',
-      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: StudEarn,
       url: 'https://example.com',
       featured: false,
     },
@@ -48,7 +54,7 @@ export function OtherPage() {
       tagline: 'Voice-first medicine reminders',
       description:
         'Voice-first medicine reminder system designed for simple and accessible daily medication management with scheduled reminders and an easy-to-use interface.',
-      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: CareCall,
       url: 'https://example.com',
       featured: false,
     },
@@ -57,7 +63,7 @@ export function OtherPage() {
       tagline: 'Community beyond the classroom',
       description:
         'Student community platform connecting engineering students through resources, opportunities, discussions, and peer-driven learning beyond the classroom.',
-      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image:AfterClass,
       url: 'https://example.com',
       featured: false,
     },
@@ -66,7 +72,7 @@ export function OtherPage() {
       tagline: 'Rural-first quick commerce',
       description:
         'Rural-first quick-commerce platform bringing essential products closer to underserved communities through simple ordering and local delivery.',
-      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: QuickGram,
       url: 'https://example.com',
       featured: false,
     },
