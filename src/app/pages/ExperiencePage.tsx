@@ -1,6 +1,10 @@
 import { motion } from 'motion/react';
 import { Building2, Calendar, MapPin, Briefcase, Clock, Star, UserRound } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import studentAlumniLogo from '@/assets/StudentAlumni-logo.jpg';
+import collegeLogo from '@/assets/college logo.jpg';
+import springboardLogo from '@/assets/springboard-logo.avif';
+import yarTechLogo from '@/assets/YarTech logo.jpg';
 
 export function ExperiencePage() {
   const highlights = [
@@ -14,7 +18,7 @@ export function ExperiencePage() {
     {
       role: 'Software Engineer',
       company: 'Student Alumni',
-      logo: '',
+      logo: studentAlumniLogo,
       type: 'Full-time',
       duration: 'Jul 2026 - Present',
       location: 'Hyderabad, Telangana',
@@ -26,7 +30,7 @@ export function ExperiencePage() {
     {
       role: 'Software Development Intern',
       company: 'Student Alumni',
-      logo: '',
+      logo: studentAlumniLogo,
       type: 'Internship',
       duration: 'May 2026 - Jul 2026',
       location: 'Hyderabad, Telangana',
@@ -38,7 +42,7 @@ export function ExperiencePage() {
     {
       role: 'Student Placement Coordinator',
       company: 'Malla Reddy College of Engineering (MRCE)',
-      logo: '',
+      logo: collegeLogo,
       type: 'On-campus',
       duration: 'May 2025 - May 2026',
       location: 'Hyderabad, Telangana',
@@ -50,7 +54,7 @@ export function ExperiencePage() {
     {
       role: 'Intern (AI/ML)',
       company: 'Infosys Springboard',
-      logo: '',
+      logo: springboardLogo,
       type: 'Internship',
       duration: 'Nov 2025 - Jan 2026',
       location: 'Remote',
@@ -62,7 +66,7 @@ export function ExperiencePage() {
     {
       role: 'Web Developer',
       company: 'YAR TECH SERVICES',
-      logo: '',
+      logo: yarTechLogo,
       type: 'Internship',
       duration: 'Dec 2024 - Feb 2025',
       location: 'Remote',
