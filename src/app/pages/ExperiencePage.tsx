@@ -1,11 +1,5 @@
 import { motion } from 'motion/react';
-import { Building2, Calendar, MapPin, Briefcase } from 'lucide-react';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '../components/ui/accordion';
+import { Building2, Calendar, MapPin, ArrowUpRight } from 'lucide-react';
 
 export function ExperiencePage() {
   const experiences = [
@@ -14,17 +8,10 @@ export function ExperiencePage() {
       company: 'Student Alumni',
       type: 'Full-time',
       duration: 'Jul 2026 - Present',
-      location: 'Hyderabad, Telangana · On-site',
+      location: 'Hyderabad, Telangana',
       active: true,
-      description: [
-        'Working on full stack web application development using Python, Flask, FastAPI, JavaScript, React.js, and MySQL, MongoDB',
-        'Developing and integrating Fast APIs for real-world platform features and workflows',
-        'Contributing to backend systems, database operations, authentication modules, and application logic',
-        'Collaborating with team members using Git/GitHub and development practices',
-        'Participating in feature development, debugging, testing, and deployment activities',
-        'Working on projects including a Student Alumni platform, automation systems, and real-time application features',
-        'Gaining hands-on industry experience in scalable web applications and software development workflows',
-      ],
+      summary:
+        'Full stack web application development using Python, Flask, FastAPI, React.js, MySQL, and MongoDB, building Fast APIs and real-world platform features.',
       skills: ['Python', 'FastAPI', 'React.js', 'JavaScript', 'Flask', 'MySQL', 'MongoDB', 'Git/GitHub'],
     },
     {
@@ -32,13 +19,10 @@ export function ExperiencePage() {
       company: 'Student Alumni',
       type: 'Internship',
       duration: 'May 2026 - Jul 2026',
-      location: 'Hyderabad, Telangana · On-site',
+      location: 'Hyderabad, Telangana',
       active: false,
-      description: [
-        'Supported full stack web application development across frontend and backend components',
-        'Assisted in building and testing APIs, database operations, and application features',
-        'Gained hands-on experience with version control, debugging, and deployment workflows',
-      ],
+      summary:
+        'Supported full stack development across frontend and backend, assisted with APIs, database operations, version control, and testing.',
       skills: ['Python', 'FastAPI', 'Web Development', 'Git/GitHub'],
     },
     {
@@ -48,10 +32,8 @@ export function ExperiencePage() {
       duration: 'May 2025 - May 2026',
       location: 'Hyderabad, Telangana',
       active: false,
-      description: [
-        'Coordinated placement activities and served as a bridge between students and recruiters',
-        'Organized campus drives, shared opportunities, and supported students through the recruitment process',
-      ],
+      summary:
+        'Coordinated placement activities, organized campus drives, and supported students through the recruitment process.',
       skills: ['Communication', 'Event Coordination', 'Leadership'],
     },
     {
@@ -61,11 +43,8 @@ export function ExperiencePage() {
       duration: 'Nov 2025 - Jan 2026',
       location: 'Remote',
       active: false,
-      description: [
-        'Worked on the Springboard Internship 6.0 focusing on AI/ML and software engineering',
-        'Worked on case studies and ML pipelines using Python and data processing workflows',
-        'Gained exposure to SDLC, unit testing, database management, and cloud fundamentals',
-      ],
+      summary:
+        'Worked on AI/ML pipelines, case studies, and data processing with Python while gaining exposure to SDLC, testing, and cloud fundamentals.',
       skills: ['Python', 'Machine Learning', 'Streamlit', 'Data Processing', 'Cloud'],
     },
     {
@@ -75,10 +54,8 @@ export function ExperiencePage() {
       duration: 'Dec 2024 - Feb 2025',
       location: 'Remote',
       active: false,
-      description: [
-        'Built and maintained websites with a focus on front-end development',
-        'Collaborated on delivering clean, responsive, and user-friendly web pages',
-      ],
+      summary:
+        'Built and maintained responsive, user-friendly websites with a focus on front-end development.',
       skills: ['Website Building', 'Front-End Development', 'HTML/CSS'],
     },
   ];
@@ -98,102 +75,105 @@ export function ExperiencePage() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-4">
-            {[
-              { label: 'Companies', value: '4' },
-              { label: 'Internships', value: '3' },
-              { label: 'Roles Held', value: '5' },
-              { label: 'Years Active', value: '2+' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 + 0.05 * index }}
-                className="bg-white rounded-2xl p-4 shadow-md hover:shadow-lg transition-shadow text-center"
-              >
-                <p className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  {stat.value}
-                </p>
-                <p className="text-sm text-gray-600 mt-0.5">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={`${exp.role}-${exp.company}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 * index }}
+              className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col ${
+                exp.active ? 'ring-2 ring-blue-500' : 'hover:-translate-y-1'
+              }`}
+            >
+              {/* Header */}
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    {exp.company.charAt(0)}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 leading-tight">{exp.role}</h3>
+                    <p className="text-sm text-gray-600 font-medium flex items-center gap-1 mt-0.5">
+                      <Building2 className="w-3.5 h-3.5 text-blue-500" />
+                      {exp.company}
+                    </p>
+                  </div>
+                </div>
+                <span
+                  className={`flex-shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold ${
+                    exp.active
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
+                      : 'bg-gray-100 text-gray-600'
+                  }`}
+                >
+                  {exp.active ? 'Current' : exp.type}
+                </span>
+              </div>
 
+              {/* Meta */}
+              <div className="mt-4 space-y-1.5 text-sm text-gray-500">
+                <p className="flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-gray-400" />
+                  {exp.duration}
+                </p>
+                <p className="flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-gray-400" />
+                  {exp.location}
+                </p>
+              </div>
+
+              {/* Summary */}
+              <p className="mt-4 text-sm text-gray-600 leading-relaxed line-clamp-3 flex-1">
+                {exp.summary}
+              </p>
+
+              {/* Skills */}
+              <div className="mt-4 pt-4 border-t border-gray-100 flex flex-wrap gap-1.5">
+                {exp.skills.slice(0, 5).map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+                {exp.skills.length > 5 && (
+                  <span className="px-2.5 py-1 bg-gray-100 text-gray-400 text-xs rounded-full font-medium">
+                    +{exp.skills.length - 5}
+                  </span>
+                )}
+              </div>
+            </motion.div>
+          ))}
+
+          {/* Summary card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden"
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-6 shadow-lg flex flex-col justify-between text-white"
           >
-            <Accordion type="single" collapsible defaultValue="Software Engineer">
-              {experiences.map((exp) => (
-                <AccordionItem key={`${exp.role}-${exp.company}`} value={exp.role} className="border-gray-100 px-4 sm:px-6">
-                  <AccordionTrigger className="hover:no-underline py-5 [&>svg]:text-gray-400">
-                    <div className="flex-1 space-y-2 text-left pr-2">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-base sm:text-lg font-bold text-gray-900">{exp.role}</span>
-                        <span
-                          className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${
-                            exp.active
-                              ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                              : 'bg-gray-100 text-gray-600'
-                          }`}
-                        >
-                          {exp.active ? 'Current' : exp.type}
-                        </span>
-                      </div>
-                      <p className="text-sm text-gray-700 font-medium flex items-center gap-1.5">
-                        <Building2 className="w-4 h-4 text-blue-500" />
-                        {exp.company}
-                      </p>
-                      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
-                        <span className="flex items-center gap-1.5">
-                          <Calendar className="w-3.5 h-3.5" />
-                          {exp.duration}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <MapPin className="w-3.5 h-3.5" />
-                          {exp.location}
-                        </span>
-                      </div>
-                      <div className="flex flex-wrap gap-1.5 pt-1">
-                        {exp.skills.slice(0, 4).map((skill) => (
-                          <span
-                            key={skill}
-                            className="px-2.5 py-0.5 bg-gray-100 text-gray-700 text-xs rounded-full font-medium"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                        {exp.skills.length > 4 && (
-                          <span className="px-2.5 py-0.5 bg-gray-100 text-gray-400 text-xs rounded-full font-medium">
-                            +{exp.skills.length - 4}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="rounded-xl bg-gray-50 p-4 sm:p-5 space-y-3">
-                      <div className="flex items-center gap-2 text-gray-900 font-semibold">
-                        <Briefcase className="w-4 h-4 text-blue-500" />
-                        Key Responsibilities
-                      </div>
-                      <ul className="space-y-2">
-                        {exp.description.map((item) => (
-                          <li key={item} className="text-sm text-gray-600 leading-relaxed flex gap-2">
-                            <span className="mt-2 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            <div className="space-y-3">
+              <h3 className="text-xl font-bold">Career Highlights</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { value: '4', label: 'Companies' },
+                  { value: '3', label: 'Internships' },
+                  { value: '5', label: 'Roles Held' },
+                  { value: '2+', label: 'Years Active' },
+                ].map((stat) => (
+                  <div key={stat.label} className="bg-white/15 backdrop-blur rounded-xl p-3 text-center">
+                    <p className="text-2xl font-bold">{stat.value}</p>
+                    <p className="text-xs text-white/80 mt-0.5">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="text-sm text-white/90 flex items-center gap-1 mt-4">
+              Full-stack developer with hands-on industry experience
+              <ArrowUpRight className="w-4 h-4" />
+            </p>
           </motion.div>
         </div>
       </motion.div>
