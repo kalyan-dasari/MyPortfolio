@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, QrCode, ScanFace, ShieldAlert, Calendar, ArrowRight } from 'lucide-react';
 import Billreminder from '@/assets/Bill_reminder.png'; 
 import College_portal from '@/assets/College_portal.png'; 
 import ExpiCal from '@/assets/ExpiCal.png'; 
@@ -11,6 +12,36 @@ import URL_checker from '@/assets/URL_checker.png';
 import Video_to_text from '@/assets/Video_to_text.png'; 
 
 export function ProjectsPage() {
+  const academicProjects = [
+    {
+      badge: '4th Year · Major Project',
+      title: 'Smart Gate Pass Automation System',
+      duration: 'Jan 2025 - Apr 2026',
+      icon: QrCode,
+      description:
+        'Built a campus automation system that digitizes student gate pass approvals through a multi-level workflow (Mentor → HOD → security scan). Generates QR-based gate passes that security can verify in real time, reducing manual paperwork and preventing fake passes.',
+      skills: ['Python', 'Flask', 'QR Codes', 'Automation'],
+    },
+    {
+      badge: '3-2 · Minor Project',
+      title: 'Cyberbullying Detection on Social Media (SGD-Based Model)',
+      duration: 'Jan 2025 - Mar 2025',
+      icon: ShieldAlert,
+      description:
+        'Developed an NLP-based machine learning model to detect abusive and cyberbullying content in social media posts. Used SGD, AdaBoost, SVM, and Multinomial Naive Bayes models for classification and achieved 93% accuracy on Twitter datasets.',
+      skills: ['Python', 'NLP', 'SGD', 'SVM', 'Naive Bayes'],
+    },
+    {
+      badge: '2-2 · Mini Project',
+      title: 'Face-to-BMI Detection System',
+      duration: 'Nov 2024 - Jan 2025',
+      icon: ScanFace,
+      description:
+        'Built a deep learning system that predicts BMI from facial images using CNN and OpenCV. The application detects faces, extracts features, and estimates BMI without requiring manual height/weight measurements.',
+      skills: ['Python', 'Deep Learning', 'CNN', 'OpenCV'],
+    },
+  ];
+
   const projects = [
     {
       title: 'Bill Reminder',
@@ -111,69 +142,157 @@ export function ProjectsPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
-            >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <ImageWithFallback
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
+        {/* Academic Projects */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-8">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Academic Projects</h2>
+              <p className="mt-2 text-gray-600">
+                Small projects built during my academic journey
+              </p>
+            </div>
+          </div>
 
-              {/* Content */}
-              <div className="p-6 space-y-4">
-                <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+          <div className="grid md:grid-cols-3 gap-8">
+            {academicProjects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 + 0.1 * index }}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                    <project.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-semibold">
+                    {project.badge}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-bold text-gray-900 leading-snug">{project.title}</h3>
+                <p className="mt-2 text-sm text-gray-500 flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-gray-400" />
+                  {project.duration}
+                </p>
+                <p className="mt-3 text-sm text-gray-600 leading-relaxed flex-1">
                   {project.description}
                 </p>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
+                <div className="mt-4 pt-4 border-t border-gray-100 flex flex-wrap gap-1.5">
+                  {project.skills.map((skill) => (
                     <span
-                      key={tag}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium"
+                      key={skill}
+                      className="px-2.5 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium"
                     >
-                      {tag}
+                      {skill}
                     </span>
                   ))}
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-                {/* Buttons */}
-                <div className="flex gap-3 pt-2">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                    <span className="text-sm font-medium">GitHub</span>
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:opacity-90 transition-opacity"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    <span className="text-sm font-medium">View</span>
-                  </a>
+        {/* Personal Projects */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-16"
+        >
+          <div className="mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Personal Projects</h2>
+            <p className="mt-2 text-gray-600">
+              Hands-on projects I built to gain practical experience and experiment with new technologies
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 + 0.08 * index }}
+                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+              >
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <ImageWithFallback
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+
+                {/* Content */}
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                    {project.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex gap-3 pt-2">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors"
+                    >
+                      <Github className="w-4 h-4" />
+                      <span className="text-sm font-medium">GitHub</span>
+                    </a>
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:opacity-90 transition-opacity"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span className="text-sm font-medium">View</span>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Redirect banner to Other section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-16 flex justify-center"
+        >
+          <Link
+            to="/other"
+            className="group inline-flex items-center gap-3 px-6 py-3 bg-gray-50 border border-gray-200 rounded-full text-gray-700 text-sm font-medium hover:bg-white hover:border-gray-300 hover:text-gray-900 transition-all duration-300 shadow-sm"
+          >
+            <span>Looking for bigger projects? Check out the Other section with live apps</span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+        </motion.div>
       </motion.div>
     </div>
   );
