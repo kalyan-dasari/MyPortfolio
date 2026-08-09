@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { ExternalLink, Github, QrCode, ScanFace, ShieldAlert, Calendar, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, QrCode, ScanFace, ShieldAlert, Calendar, ArrowRight, Sparkles } from 'lucide-react';
 import Billreminder from '@/assets/Bill_reminder.png'; 
 import College_portal from '@/assets/College_portal.png'; 
 import ExpiCal from '@/assets/ExpiCal.png'; 
@@ -206,11 +206,34 @@ export function ProjectsPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-16"
         >
-          <div className="mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Personal Projects</h2>
-            <p className="mt-2 text-gray-600">
-              Hands-on projects I built to gain practical experience and experiment with new technologies
-            </p>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Personal Projects</h2>
+              <p className="mt-2 text-gray-600">
+                Hands-on projects I built to gain practical experience and experiment with new technologies
+              </p>
+            </div>
+
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              className="relative flex-shrink-0"
+            >
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-md opacity-30 animate-pulse"></div>
+              <div className="relative flex items-center gap-3 pl-4 pr-2 py-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-full shadow-lg">
+                <Sparkles className="w-4 h-4 text-yellow-300 flex-shrink-0" />
+                <span className="text-sm font-medium whitespace-nowrap">
+                  Small but the building blocks of mine
+                </span>
+                <Link
+                  to="/other"
+                  className="flex items-center gap-1.5 bg-white/20 hover:bg-white/30 backdrop-blur px-3 py-1.5 rounded-full text-sm font-semibold transition-colors"
+                >
+                  Check Others
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </motion.div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
