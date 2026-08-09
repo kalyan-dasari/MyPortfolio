@@ -61,6 +61,51 @@ export function OtherPage() {
       url: 'https://law-students-website.vercel.app/',
       featured: true,
     },
+    {
+      title: 'LastMinutePrep',
+      tagline: 'AI-powered exam prep',
+      description:
+        'AI-powered exam preparation platform built to help students revise important topics, generate study plans, and prepare effectively when time is limited.',
+      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://example.com',
+      featured: false,
+    },
+    {
+      title: 'StudEarn',
+      tagline: 'Earn while you learn',
+      description:
+        'Student-focused platform connecting young learners with earning opportunities, skill-building resources, and real-world experiences beyond academics.',
+      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://example.com',
+      featured: false,
+    },
+    {
+      title: 'CareCall',
+      tagline: 'Voice-first medicine reminders',
+      description:
+        'Voice-first medicine reminder system designed for simple and accessible daily medication management with scheduled reminders and an easy-to-use interface.',
+      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://example.com',
+      featured: false,
+    },
+    {
+      title: 'AfterClass',
+      tagline: 'Community beyond the classroom',
+      description:
+        'Student community platform connecting engineering students through resources, opportunities, discussions, and peer-driven learning beyond the classroom.',
+      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://example.com',
+      featured: false,
+    },
+    {
+      title: 'QuickGram',
+      tagline: 'Rural-first quick commerce',
+      description:
+        'Rural-first quick-commerce platform bringing essential products closer to underserved communities through simple ordering and local delivery.',
+      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://example.com',
+      featured: false,
+    },
   ];
 
   return (
