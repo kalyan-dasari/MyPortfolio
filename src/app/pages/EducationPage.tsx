@@ -11,7 +11,7 @@ export function EducationPage() {
       institution: 'Malla Reddy College of Engineering',
       degree: 'B.Tech CSE (AIML)',
       duration: '2022 - 2026',
-      cgpa: '8.1 CGPA',
+      cgpa: '8.2 CGPA',
       image: mrce,
     },
     {
