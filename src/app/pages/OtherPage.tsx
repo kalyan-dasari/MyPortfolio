@@ -7,7 +7,7 @@ import lawWebsite from '@/assets/lawWebsite.png';
 import AfterClass from '@/assets/AfterClass.png';  
 import QuickGram from '@/assets/QuickGram.png';  
 import Lastminprep from '@/assets/Lastminprep.png';  
-import CareCall from '@/assets/CareCall.png'; 
+import CareCall from '@/assets/Carecall.png'; 
 import StudEarn from '@/assets/StudEarn.png'; 
 
 
