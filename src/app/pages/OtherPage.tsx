@@ -17,42 +17,6 @@ export function OtherPage() {
       featured: true,
     },
     {
-      title: 'BTech Hub',
-      tagline: 'JNTUH student materials',
-      description:
-        'A resource hub for JNTUH students to access syllabi, notes, PDFs and more, with simple view and download support.',
-      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      url: 'https://example.com',
-      featured: false,
-    },
-    {
-      title: 'UnMuteVoices',
-      tagline: 'A text podcast channel for hidden voices',
-      description:
-        'A podcast-style text platform giving voice to people who struggle to express feelings and thoughts, sharing their experiences and stories.',
-      image: podcast,
-      url: 'https://www.linkedin.com/company/109281957/admin/dashboard/',
-      featured: false,
-    },
-    {
-      title: 'Life With Kalyan',
-      tagline: 'YouTube channel for web design inspiration',
-      description:
-        'A curated collection of developer tools and resources to boost productivity and streamline your development workflow.',
-      image: studio,
-      url: 'https://www.youtube.com/@LifewithKalyan',
-      featured: false,
-    },
-    {
-      title: 'Blogger Page',
-      tagline: 'English Local News — Karimnagar',
-      description:
-        'A blogging platform providing daily news updates in English about Karimnagar and surrounding areas, where most local news is otherwise available only in Telugu.',
-      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      url: 'https://example.com',
-      featured: false,
-    },
-    {
       title: 'Law Students Hub',
       tagline: 'Website for law students OU Affiliated colleges',
       description:
@@ -102,6 +66,42 @@ export function OtherPage() {
       tagline: 'Rural-first quick commerce',
       description:
         'Rural-first quick-commerce platform bringing essential products closer to underserved communities through simple ordering and local delivery.',
+      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://example.com',
+      featured: false,
+    },
+    {
+      title: 'BTech Hub',
+      tagline: 'JNTUH student materials',
+      description:
+        'A resource hub for JNTUH students to access syllabi, notes, PDFs and more, with simple view and download support.',
+      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://example.com',
+      featured: false,
+    },
+    {
+      title: 'UnMuteVoices',
+      tagline: 'A text podcast channel for hidden voices',
+      description:
+        'A podcast-style text platform giving voice to people who struggle to express feelings and thoughts, sharing their experiences and stories.',
+      image: podcast,
+      url: 'https://www.linkedin.com/company/109281957/admin/dashboard/',
+      featured: false,
+    },
+    {
+      title: 'Life With Kalyan',
+      tagline: 'YouTube channel for web design inspiration',
+      description:
+        'A curated collection of developer tools and resources to boost productivity and streamline your development workflow.',
+      image: studio,
+      url: 'https://www.youtube.com/@LifewithKalyan',
+      featured: false,
+    },
+    {
+      title: 'Blogger Page',
+      tagline: 'English Local News — Karimnagar',
+      description:
+        'A blogging platform providing daily news updates in English about Karimnagar and surrounding areas, where most local news is otherwise available only in Telugu.',
       image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
       url: 'https://example.com',
       featured: false,
