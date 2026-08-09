@@ -1,11 +1,20 @@
 import { motion } from 'motion/react';
-import { Building2, Calendar, MapPin, ArrowUpRight } from 'lucide-react';
+import { Building2, Calendar, MapPin, Briefcase, Clock, Star, UserRound } from 'lucide-react';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 export function ExperiencePage() {
+  const highlights = [
+    { icon: Building2, value: '4', label: 'Companies' },
+    { icon: Briefcase, value: '3', label: 'Internships' },
+    { icon: UserRound, value: '5', label: 'Roles Held' },
+    { icon: Clock, value: '2+', label: 'Years Active' },
+  ];
+
   const experiences = [
     {
       role: 'Software Engineer',
       company: 'Student Alumni',
+      logo: '',
       type: 'Full-time',
       duration: 'Jul 2026 - Present',
       location: 'Hyderabad, Telangana',
@@ -17,6 +26,7 @@ export function ExperiencePage() {
     {
       role: 'Software Development Intern',
       company: 'Student Alumni',
+      logo: '',
       type: 'Internship',
       duration: 'May 2026 - Jul 2026',
       location: 'Hyderabad, Telangana',
@@ -28,6 +38,7 @@ export function ExperiencePage() {
     {
       role: 'Student Placement Coordinator',
       company: 'Malla Reddy College of Engineering (MRCE)',
+      logo: '',
       type: 'On-campus',
       duration: 'May 2025 - May 2026',
       location: 'Hyderabad, Telangana',
@@ -39,6 +50,7 @@ export function ExperiencePage() {
     {
       role: 'Intern (AI/ML)',
       company: 'Infosys Springboard',
+      logo: '',
       type: 'Internship',
       duration: 'Nov 2025 - Jan 2026',
       location: 'Remote',
@@ -50,6 +62,7 @@ export function ExperiencePage() {
     {
       role: 'Web Developer',
       company: 'YAR TECH SERVICES',
+      logo: '',
       type: 'Internship',
       duration: 'Dec 2024 - Feb 2025',
       location: 'Remote',
@@ -75,13 +88,55 @@ export function ExperiencePage() {
           </p>
         </div>
 
+        {/* Career Highlights */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 rounded-3xl p-8 sm:p-10 mb-12 shadow-2xl"
+        >
+          <div className="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
+          <div className="absolute -bottom-20 -left-10 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl"></div>
+
+          <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div className="lg:max-w-xs">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/15 backdrop-blur rounded-full text-sm font-semibold text-white mb-4">
+                <Star className="w-4 h-4 text-yellow-300" />
+                Career Highlights
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                Building a career in tech
+              </h2>
+              <p className="mt-3 text-white/80 leading-relaxed">
+                Full-stack developer with hands-on industry experience across startups, internships, and campus leadership.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 flex-1">
+              {highlights.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 + 0.08 * index }}
+                  className="bg-white/15 backdrop-blur rounded-2xl p-4 text-center border border-white/20"
+                >
+                  <stat.icon className="w-5 h-5 text-yellow-300 mx-auto mb-2" />
+                  <p className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</p>
+                  <p className="text-xs text-white/80 mt-0.5">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {experiences.map((exp, index) => (
             <motion.div
               key={`${exp.role}-${exp.company}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 * index }}
+              transition={{ duration: 0.6, delay: 0.15 + 0.08 * index }}
               className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col ${
                 exp.active ? 'ring-2 ring-blue-500' : 'hover:-translate-y-1'
               }`}
@@ -89,8 +144,18 @@ export function ExperiencePage() {
               {/* Header */}
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                    {exp.company.charAt(0)}
+                  <div className="w-11 h-11 rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    {exp.logo ? (
+                      <ImageWithFallback
+                        src={exp.logo}
+                        alt={exp.company}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg">
+                        {exp.company.charAt(0)}
+                      </div>
+                    )}
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 leading-tight">{exp.role}</h3>
@@ -146,35 +211,6 @@ export function ExperiencePage() {
               </div>
             </motion.div>
           ))}
-
-          {/* Summary card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-6 shadow-lg flex flex-col justify-between text-white"
-          >
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold">Career Highlights</h3>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  { value: '4', label: 'Companies' },
-                  { value: '3', label: 'Internships' },
-                  { value: '5', label: 'Roles Held' },
-                  { value: '2+', label: 'Years Active' },
-                ].map((stat) => (
-                  <div key={stat.label} className="bg-white/15 backdrop-blur rounded-xl p-3 text-center">
-                    <p className="text-2xl font-bold">{stat.value}</p>
-                    <p className="text-xs text-white/80 mt-0.5">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <p className="text-sm text-white/90 flex items-center gap-1 mt-4">
-              Full-stack developer with hands-on industry experience
-              <ArrowUpRight className="w-4 h-4" />
-            </p>
-          </motion.div>
         </div>
       </motion.div>
     </div>
