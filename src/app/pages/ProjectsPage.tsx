@@ -202,122 +202,144 @@ export function ProjectsPage() {
           </div>
         </motion.div>
 
-        {/* Personal Projects */}
+        {/* Big Projects Callout */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-16"
         >
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10">
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Personal Projects</h2>
-              <p className="mt-2 text-gray-600">
-                Hands-on projects I built to gain practical experience and experiment with new technologies
-              </p>
-            </div>
+          <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl px-8 py-12 sm:px-12 lg:px-16 shadow-xl">
+            <div className="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-20 -left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
 
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="relative flex-shrink-0"
-            >
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-md opacity-30 animate-pulse"></div>
-              <div className="relative flex items-center gap-3 pl-4 pr-2 py-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-full shadow-lg">
-                <Sparkles className="w-4 h-4 text-yellow-300 flex-shrink-0" />
-                <span className="text-sm font-medium whitespace-nowrap">
-                  Small but the building blocks of mine
-                </span>
-                <Link
-                  to="/other"
-                  className="flex items-center gap-1.5 bg-white/20 hover:bg-white/30 backdrop-blur px-3 py-1.5 rounded-full text-sm font-semibold transition-colors"
-                >
-                  Check Others
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+            <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+              <div className="max-w-2xl">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/15 backdrop-blur rounded-full text-white/90 text-sm font-semibold mb-4">
+                  <Rocket className="w-4 h-4" />
+                  Bigger Builds
+                </div>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight mb-3">
+                  Want to see what I can really do?
+                </h2>
+                <p className="text-white/80 text-base sm:text-lg leading-relaxed">
+                  Explore the Other section — a collection of full-scale platforms, live apps, and
+                  collaborative projects that showcase the bigger side of my work.
+                </p>
               </div>
-            </motion.div>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.15 + 0.08 * index }}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+              <Link
+                to="/other"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-900 rounded-full font-semibold shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 flex-shrink-0"
               >
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Buttons */}
-                  <div className="flex gap-3 pt-2">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
-                      <span className="text-sm font-medium">GitHub</span>
-                    </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:opacity-90 transition-opacity"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span className="text-sm font-medium">View</span>
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                View Big Projects
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
           </div>
         </motion.div>
 
-        {/* Redirect banner to Other section */}
+        {/* Personal Projects */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 flex justify-center"
+          className="mt-16"
         >
-          <Link
-            to="/other"
-            className="group inline-flex items-center gap-3 px-6 py-3 bg-gray-50 border border-gray-200 rounded-full text-gray-700 text-sm font-medium hover:bg-white hover:border-gray-300 hover:text-gray-900 transition-all duration-300 shadow-sm"
-          >
-            <span>Looking for bigger projects? Check out the Other section with live apps</span>
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Personal Projects</h2>
+            <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
+              Quick, hands-on side experiments I built to learn new tools, technologies, and ideas at my own pace.
+            </p>
+          </div>
+
+          {!showPersonal ? (
+            <div className="flex justify-center">
+              <button
+                onClick={() => setShowPersonal(true)}
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-gray-900 text-white rounded-full font-semibold shadow-lg hover:bg-gray-800 hover:-translate-y-0.5 transition-all duration-300"
+              >
+                <ChevronDown className="w-5 h-5" />
+                View All Personal Projects
+              </button>
+            </div>
+          ) : (
+            <>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {projects.map((project, index) => (
+                  <motion.div
+                    key={project.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.05 * index }}
+                    className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
+                  >
+                    {/* Image */}
+                    <div className="relative h-48 overflow-hidden">
+                      <ImageWithFallback
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6 space-y-4">
+                      <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                        {project.description}
+                      </p>
+
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-medium"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Buttons */}
+                      <div className="flex gap-3 pt-2">
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors"
+                        >
+                          <Github className="w-4 h-4" />
+                          <span className="text-sm font-medium">GitHub</span>
+                        </a>
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:opacity-90 transition-opacity"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          <span className="text-sm font-medium">View</span>
+                        </a>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="flex justify-center mt-10">
+                <button
+                  onClick={() => setShowPersonal(false)}
+                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-gray-100 text-gray-700 rounded-full font-semibold hover:bg-gray-200 transition-colors"
+                >
+                  <ChevronUp className="w-5 h-5" />
+                  Show Less
+                </button>
+              </div>
+            </>
+          )}
         </motion.div>
       </motion.div>
     </div>
