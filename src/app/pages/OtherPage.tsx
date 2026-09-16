@@ -40,7 +40,7 @@ export function OtherPage() {
       description:
         'A creator-focused tool that converts voiceovers and SRT caption files into engaging short-form videos for Instagram Reels and YouTube Shorts. Designed with customizable captions, styling, previews, and streamlined video export for faster content creation.',
       image: CaptionFlow,
-      url: 'https://example.com',
+      url: 'https://github.com/kalyan-dasari/CaptionFlow',
       featured: false,
     },
     {
@@ -49,7 +49,7 @@ export function OtherPage() {
       description:
         'A lightweight collaborative document editor inspired by Google Docs, featuring rich-text editing, autosave, role-based sharing, and secure backend authorization. Supports seamless .docx, .md, and .txt import/export for reliable document creation and collaboration.',
       image: DocFlow,
-      url: 'https://example.com',
+      url: 'https://dock-flow-seven.vercel.app/',
       featured: false,
     },
     {
@@ -58,7 +58,7 @@ export function OtherPage() {
       description:
         'A privacy-first local application for generating, editing, styling, and exporting video captions using Faster-Whisper. Built with Tanglish support, it runs entirely on-device with no API keys, cloud services, or per-minute processing costs.',
       image: LocalAIVideoCaptionStudio,
-      url: 'https://example.com',
+      url: 'https://github.com/kalyan-dasari/Captions-Creator',
       featured: false,
     },
     {
@@ -67,7 +67,7 @@ export function OtherPage() {
       description:
         'AI-powered exam preparation platform built to help students revise important topics, generate study plans, and prepare effectively when time is limited.',
       image: Lastminprep,
-      url: 'https://example.com',
+      url: 'https://last-minute-prep.vercel.app/',
       featured: false,
     },
     {
@@ -85,7 +85,7 @@ export function OtherPage() {
       description:
         'Voice-first medicine reminder system designed for simple and accessible daily medication management with scheduled reminders and an easy-to-use interface.',
       image: CareCall,
-      url: 'https://example.com',
+      url: 'https://github.com/kalyan-dasari/CareCall-',
       featured: false,
     },
     {
