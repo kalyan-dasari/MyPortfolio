@@ -46,7 +46,7 @@ export function OtherPage() {
       description:
         'Student-focused platform connecting young learners with earning opportunities, skill-building resources, and real-world experiences beyond academics.',
       image: StudEarn,
-      url: 'https://example.com',
+      url: 'https://www.studearning.tech/',
       featured: false,
     },
     {
