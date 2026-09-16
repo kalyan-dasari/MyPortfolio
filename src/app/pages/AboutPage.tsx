@@ -9,7 +9,7 @@ export function AboutPage() {
       icon: Target,
       title: 'Who I Am',
       content:
-        "I'm a final-year student, a passionate developer, and a lifelong learner who believes in the power of technology to transform lives. My journey in tech has been driven by curiosity and a desire to create meaningful solutions.  I love exploring different domains—tech and non-tech—because it allows me to discover new interests and understand the world from multiple angles.",
+        "I'm a graduate, a passionate developer, and a lifelong learner who believes in the power of technology to transform lives. My journey in tech has been driven by curiosity and a desire to create meaningful solutions.  I love exploring different domains—tech and non-tech—because it allows me to discover new interests and understand the world from multiple angles.",
     },
     {
       icon: Heart,
