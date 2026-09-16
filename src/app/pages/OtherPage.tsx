@@ -32,6 +32,33 @@ export function OtherPage() {
       featured: true,
     },
     {
+      title: 'CaptionFlow',
+      tagline: 'Voiceovers & captions to Reels/Shorts',
+      description:
+        'A creator-focused tool that converts voiceovers and SRT caption files into engaging short-form videos for Instagram Reels and YouTube Shorts. Designed with customizable captions, styling, previews, and streamlined video export for faster content creation.',
+      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://example.com',
+      featured: false,
+    },
+    {
+      title: 'DocFlow',
+      tagline: 'Collaborative document editor',
+      description:
+        'A lightweight collaborative document editor inspired by Google Docs, featuring rich-text editing, autosave, role-based sharing, and secure backend authorization. Supports seamless .docx, .md, and .txt import/export for reliable document creation and collaboration.',
+      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://example.com',
+      featured: false,
+    },
+    {
+      title: 'Local AI Video Caption Studio',
+      tagline: 'Privacy-first on-device captions',
+      description:
+        'A privacy-first local application for generating, editing, styling, and exporting video captions using Faster-Whisper. Built with Tanglish support, it runs entirely on-device with no API keys, cloud services, or per-minute processing costs.',
+      image: 'https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzY4MTc1MTY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://example.com',
+      featured: false,
+    },
+    {
       title: 'LastMinutePrep',
       tagline: 'AI-powered exam prep',
       description:
