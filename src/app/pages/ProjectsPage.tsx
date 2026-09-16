@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import { ExternalLink, Github, QrCode, ScanFace, ShieldAlert, Calendar, ArrowRight, Sparkles } from 'lucide-react';
+import { ExternalLink, Github, QrCode, ScanFace, ShieldAlert, Calendar, ArrowRight, ChevronDown, ChevronUp, Rocket } from 'lucide-react';
 import Billreminder from '@/assets/Bill_reminder.png'; 
 import College_portal from '@/assets/College_portal.png'; 
 import ExpiCal from '@/assets/ExpiCal.png'; 
@@ -12,6 +13,8 @@ import URL_checker from '@/assets/URL_checker.png';
 import Video_to_text from '@/assets/Video_to_text.png'; 
 
 export function ProjectsPage() {
+  const [showPersonal, setShowPersonal] = useState(false);
+
   const academicProjects = [
     {
       badge: '4th Year · Major Project',
