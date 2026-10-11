@@ -13,6 +13,7 @@ export function Navbar() {
     { label: 'Experience', path: '/experience' },
     { label: 'Projects', path: '/projects' },
     { label: 'Other', path: '/other' },
+    { label: 'Connect Me', path: '/connect' },
   ];
 
   const isActive = (path: string) => location.pathname === path;

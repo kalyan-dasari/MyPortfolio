@@ -6,6 +6,7 @@ import { EducationPage } from './pages/EducationPage';
 import { ExperiencePage } from './pages/ExperiencePage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { OtherPage } from './pages/OtherPage';
+import { ConnectPage } from './pages/ConnectPage';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/experience" element={<ExperiencePage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/other" element={<OtherPage />} />
+            <Route path="/connect" element={<ConnectPage />} />
           </Routes>
         </main>
       </div>
