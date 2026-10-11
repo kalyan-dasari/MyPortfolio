@@ -41,7 +41,7 @@ export function OtherPage() {
         'A helpful platform for BALLB students in OU-affiliated colleges to explore their curriculum, download study materials, track semesters, and stay organized throughout their 5-year course.',
       image: lawWebsite,
       url: 'https://law-students-website.vercel.app/',
-      featured: true,
+      featured: false,
     },
     {
       title: 'CaptionFlow',
@@ -94,8 +94,8 @@ export function OtherPage() {
       description:
         'Student community platform connecting engineering students through resources, opportunities, discussions, and peer-driven learning beyond the classroom.',
       image:AfterClass,
-      url: 'https://example.com',
-      featured: false,
+      url: 'https://www.after-class.live/',
+      featured: true,
     },
     {
       title: 'QuickGram',
