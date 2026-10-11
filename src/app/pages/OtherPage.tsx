@@ -12,6 +12,7 @@ import StudEarn from '@/assets/StudEarn.png';
 import CaptionFlow from '@/assets/CaptionFlow.jpg'; 
 import DocFlow from '@/assets/DocFlow.png'; 
 import LocalAIVideoCaptionStudio from '@/assets/Local-AI-Video-Caption-Studio.jpg'; 
+import Openreaders from '@/assets/Openreaders.png'; 
 
 
 export function OtherPage() {
@@ -30,7 +31,7 @@ export function OtherPage() {
       tagline: 'A platform for open reading and story sharing',
       description:
         'OpenReaders is a community-driven platform to share stories, books, and discover new content across genres.',
-      image: 'https://images.unsplash.com/photo-1758876203761-623fcf794de2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibG9nJTIwcGxhdGZvcm18ZW58MXx8fHwxNzY4MTE0Mzg5fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: Openreaders,
       url: 'https://www.openreaders.me',
       featured: true,
     },
