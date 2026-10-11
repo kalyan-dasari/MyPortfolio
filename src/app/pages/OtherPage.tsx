@@ -17,6 +17,15 @@ import LocalAIVideoCaptionStudio from '@/assets/Local-AI-Video-Caption-Studio.jp
 export function OtherPage() {
   const externalProjects = [
     {
+      title: 'StudEarn',
+      tagline: 'Earn while you learn',
+      description:
+        'Student-focused platform connecting young learners with earning opportunities, skill-building resources, and real-world experiences beyond academics.',
+      image: StudEarn,
+      url: 'https://www.studearning.tech/',
+      featured: true,
+    },
+    {
       title: 'OpenReaders',
       tagline: 'A platform for open reading and story sharing',
       description:
@@ -69,15 +78,6 @@ export function OtherPage() {
       image: Lastminprep,
       url: 'https://last-minute-prep.vercel.app/',
       featured: false,
-    },
-    {
-      title: 'StudEarn',
-      tagline: 'Earn while you learn',
-      description:
-        'Student-focused platform connecting young learners with earning opportunities, skill-building resources, and real-world experiences beyond academics.',
-      image: StudEarn,
-      url: 'https://www.studearning.tech/',
-      featured: true,
     },
     {
       title: 'CareCall',
