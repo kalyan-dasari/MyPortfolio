@@ -77,7 +77,7 @@ export function OtherPage() {
         'Student-focused platform connecting young learners with earning opportunities, skill-building resources, and real-world experiences beyond academics.',
       image: StudEarn,
       url: 'https://www.studearning.tech/',
-      featured: false,
+      featured: true,
     },
     {
       title: 'CareCall',
