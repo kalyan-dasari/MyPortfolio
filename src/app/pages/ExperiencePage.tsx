@@ -20,7 +20,7 @@ export function ExperiencePage() {
       company: 'Student Alumni',
       logo: studentAlumniLogo,
       type: 'Full-time',
-      duration: 'Jul 2026 - Present',
+      duration: 'Jul 2026 - Oct 2026',
       location: 'Hyderabad, Telangana',
       active: true,
       summary:
