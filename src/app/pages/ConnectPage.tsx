@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowUpRight, Github, Globe, MapPin, MessageCircle, Youtube } from 'lucide-react';
+import { ArrowUpRight, Github, Globe, Linkedin, MapPin, MessageCircle } from 'lucide-react';
 
 const connectionOptions = [
   {
@@ -11,12 +11,12 @@ const connectionOptions = [
     className: 'from-gray-800 to-gray-950',
   },
   {
-    title: 'YouTube',
-    description: 'Follow along for web design inspiration and developer content.',
-    href: 'https://www.youtube.com/@LifewithKalyan',
-    icon: Youtube,
-    label: 'Visit YouTube',
-    className: 'from-red-500 to-rose-600',
+    title: 'LinkedIn',
+    description: 'Connect with me professionally and follow my career journey.',
+    href: 'https://linkedin.com/in/kalyan-dasari/',
+    icon: Linkedin,
+    label: 'Visit LinkedIn',
+    className: 'from-blue-600 to-sky-700',
   },
   {
     title: 'Portfolio',
